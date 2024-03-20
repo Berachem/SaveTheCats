@@ -56,8 +56,9 @@ public class PlayerController : MonoBehaviour
         else //si on a un chat dans les bras
         {
             grabbedCat.transform.position = transform.position + transform.forward;
-            grabbedCat.transform.rotation = transform.rotation;
-            
+            Vector3 directionToPlayer = (transform.position - grabbedCat.transform.position).normalized;
+            grabbedCat.transform.rotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+
             if (Input.GetKeyDown("e"))
             {
                 putDownCat();
@@ -87,7 +88,13 @@ public class PlayerController : MonoBehaviour
 
     public void putDownCat()
     {
-        grabbedCat.GetComponent<Rigidbody>().freezeRotation = false;
+        grabbedCat.transform.rotation = Quaternion.identity;
+
+        // Activez la gravité si elle était désactivée
+        Rigidbody catRigidbody = grabbedCat.GetComponent<Rigidbody>();
+        catRigidbody.freezeRotation = false;
+        catRigidbody.useGravity = true; // Assurez-vous que cette ligne est nécessaire selon votre configuration
+
         grabbedCat = null;
     }
 }

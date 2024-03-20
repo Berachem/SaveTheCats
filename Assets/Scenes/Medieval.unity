@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7309,6 +7309,10 @@ PrefabInstance:
     - target: {fileID: 3868808604223670391, guid: d7e7743e79d55d04483d98c450bea775, type: 3}
       propertyPath: m_Name
       value: SafeZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007280215819086923, guid: d7e7743e79d55d04483d98c450bea775, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8087247028023195744, guid: d7e7743e79d55d04483d98c450bea775, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20878,6 +20882,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223399549592147868, guid: e5c16de28bca2714c974258650875027, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782473797936064953, guid: e5c16de28bca2714c974258650875027, type: 3}
+      propertyPath: isInSafeZone
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

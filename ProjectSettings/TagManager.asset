@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cat
   - Grabable
+  - SafeZone
   layers:
   - Default
   - TransparentFX

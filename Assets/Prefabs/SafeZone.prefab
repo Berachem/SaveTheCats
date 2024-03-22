@@ -535,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8087247028023195744}
   - component: {fileID: 7007280215819086923}
+  - component: {fileID: 678978951119247425}
   m_Layer: 0
   m_Name: SafeZone
   m_TagString: SafeZone
@@ -596,12 +597,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 9.688261, y: 6.380581, z: 10.022444}
   m_Center: {x: -0.7993233, y: 2.6902905, z: 0.6378546}
+--- !u!114 &678978951119247425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3868808604223670391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f49361fc47d5144bc833ee5fba1ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4093685216409975112
 GameObject:
   m_ObjectHideFlags: 0

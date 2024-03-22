@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CatController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class CatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isInSafeZone)
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        }
     }
 }

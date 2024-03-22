@@ -88,13 +88,6 @@ public class PlayerController : MonoBehaviour
 
     public void putDownCat()
     {
-        grabbedCat.transform.rotation = Quaternion.identity;
-
-        // Activez la gravité si elle était désactivée
-        Rigidbody catRigidbody = grabbedCat.GetComponent<Rigidbody>();
-        catRigidbody.freezeRotation = false;
-        catRigidbody.useGravity = true; // Assurez-vous que cette ligne est nécessaire selon votre configuration
-
         grabbedCat = null;
     }
 }

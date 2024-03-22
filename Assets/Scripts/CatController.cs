@@ -9,7 +9,7 @@ public class CatController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Animator>().SetTrigger("walk");
+        gameObject.GetComponent<Animator>().SetTrigger("Walk");
     }
 
     // Update is called once per frame

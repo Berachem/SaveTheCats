@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
                         grabbedCat = seenCat;
                         grabbedCat.GetComponent<Rigidbody>().freezeRotation = true;
+                        grabbedCat.GetComponent<Animator>().SetBool("Walk",false);
+                        grabbedCat.GetComponent<Animator>().SetBool("Sit", true);
                         indication.gameObject.SetActive(false);
 
                     }
@@ -88,6 +90,8 @@ public class PlayerController : MonoBehaviour
 
     public void putDownCat()
     {
+        grabbedCat.GetComponent<Animator>().SetBool("Walk", true);
+        grabbedCat.GetComponent<Animator>().SetBool("Sit", false);
         grabbedCat = null;
     }
 }

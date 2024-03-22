@@ -6075,7 +6075,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
@@ -21095,21 +21095,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 786734689736611231, guid: e5c16de28bca2714c974258650875027, type: 3}
-      propertyPath: wanderTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 786734689736611231, guid: e5c16de28bca2714c974258650875027, type: 3}
-      propertyPath: wanderRadius
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5927668254007688883, guid: e5c16de28bca2714c974258650875027, type: 3}
       propertyPath: m_Name
       value: cat
-      objectReference: {fileID: 0}
-    - target: {fileID: 6326436746731022502, guid: e5c16de28bca2714c974258650875027, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8223399549592147868, guid: e5c16de28bca2714c974258650875027, type: 3}
       propertyPath: m_LocalPosition.x

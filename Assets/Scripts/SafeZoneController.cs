@@ -13,6 +13,8 @@ public class SafeZoneController : MonoBehaviour
             catController.GetComponent<NavMeshAgent>().enabled = false;
             catController.GetComponent<WanderingAI>().enabled = false;
             catController.GetComponent<Rigidbody>().isKinematic = false;
+            catController.GetComponent<Animator>().SetBool("Walk", false);
+            catController.GetComponent<Animator>().SetBool("Sit", true);
         }
     }
 
@@ -25,6 +27,8 @@ public class SafeZoneController : MonoBehaviour
             catController.GetComponent<NavMeshAgent>().enabled = true;
             catController.GetComponent<WanderingAI>().enabled = true;
             catController.GetComponent<Rigidbody>().isKinematic = true;
+            catController.GetComponent<Animator>().SetBool("Walk", true);
+            catController.GetComponent<Animator>().SetBool("Sit", false);
         }
     }
 }

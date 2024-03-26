@@ -28,4 +28,9 @@ public class ButtonController : MonoBehaviour
     {
         userInterface.SwitchPause();
     }
+
+    public void StartSecondLevel()
+    {
+        SceneManager.LoadScene("Pirates");
+    }
 }

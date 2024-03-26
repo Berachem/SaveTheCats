@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InterfaceController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class InterfaceController : MonoBehaviour
     public GameObject menu;
     public GameObject userInterface;
     public TextMeshProUGUI timerText; // Texte pour le timer
+    public GameObject nextLevel;
     private float startTime; // Heure de début pour le timer
     private bool timerActive = true; // Détermine si le timer est actif
     private bool gameRunning = true;
@@ -54,8 +56,13 @@ public class InterfaceController : MonoBehaviour
 
     public void StopTimer()
     {
-        timerActive = false;
-        gameRunning = false;
+        if (gameRunning)
+        {
+            timerActive = false;
+            gameRunning = false;
+            nextLevel.SetActive(true);
+            camera.SwitchCursorLock();
+        }
     }
 
     public void SwitchPause()

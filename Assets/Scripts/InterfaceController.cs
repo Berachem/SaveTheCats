@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InterfaceController : MonoBehaviour
 {
-    public FirstPersonController camera;
+    public CustomFirstPersonController FPVcamera;
     public GameObject menu;
     public GameObject userInterface;
     public TextMeshProUGUI timerText; // Texte pour le timer
@@ -38,8 +38,8 @@ public class InterfaceController : MonoBehaviour
 
     public void SwitchMenu()
     {
-        menu.SetActive(!menu.active);
-        userInterface.SetActive(!userInterface.active);
+        menu.SetActive(!menu.activeSelf);
+        userInterface.SetActive(!userInterface.activeSelf);
     }
    
 
@@ -61,14 +61,14 @@ public class InterfaceController : MonoBehaviour
             timerActive = false;
             gameRunning = false;
             nextLevel.SetActive(true);
-            camera.SwitchCursorLock();
+            FPVcamera.SwitchCursorLock();
         }
     }
 
     public void SwitchPause()
     {
         SwitchMenu();
-        camera.SwitchCursorLock();
+        FPVcamera.SwitchCursorLock();
         if (gameRunning)
         {
             timerActive = !timerActive;

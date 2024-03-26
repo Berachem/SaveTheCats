@@ -19,6 +19,8 @@ public class InterfaceController : MonoBehaviour
     void Start()
     {
         startTime = Time.time; // Initialise le startTime avec le temps actuel
+        nextLevel.SetActive(false); // Désactive le texte pour le niveau suivant
+        FPVcamera.unlockCursor(); // Dévérouille le curseur
     }
 
     // Update is called once per frame
@@ -61,7 +63,7 @@ public class InterfaceController : MonoBehaviour
             timerActive = false;
             gameRunning = false;
             nextLevel.SetActive(true);
-            FPVcamera.SwitchCursorLock();
+            FPVcamera.lockCursor();
         }
     }
 

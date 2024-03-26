@@ -86,7 +86,16 @@ public class CustomFirstPersonController : MonoBehaviour
     public void SwitchCursorLock()
     {
         FPVLocked = !FPVLocked;
+    }
 
+    public void unlockCursor()
+    {
+       FPVLocked = false;
+    }
+
+    public void lockCursor()
+    {
+        FPVLocked = true;
     }
 
 

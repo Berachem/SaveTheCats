@@ -5,10 +5,8 @@ using UnityEngine.AI;
 public class SafeZoneController : MonoBehaviour
 {
     public TextMeshProUGUI indication; // Texte pour les indications des chats
-    public TextMeshProUGUI timerText; // Texte pour le timer
     private int catsRemaining;
-    private float startTime; // Heure de début pour le timer
-    private bool timerActive = true; // Détermine si le timer est actif
+    public InterfaceController userInterface;
 
 
     private void Start()
@@ -16,12 +14,11 @@ public class SafeZoneController : MonoBehaviour
         // Initialiser catsRemaining avec le nombre de chats dans la scène
         catsRemaining = GameObject.FindGameObjectsWithTag("Grabable").Length;
         UpdateIndicationText();
-        startTime = Time.time; // Initialise le startTime avec le temps actuel
     }
 
     private void Update()
     {
-        UpdateTimerText(); // Met à jour le texte du timer chaque frame
+        UpdateIndicationText();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,24 +68,8 @@ public class SafeZoneController : MonoBehaviour
         {
             // Texte "Victoire !" en vert
             indication.text = "<color=#00FF00>Victoire !</color>";
-            StopTimer(); // Arrête le timer quand il n'y a plus de chats à sauver
+            userInterface.StopTimer(); // Arrête le timer quand il n'y a plus de chats à sauver
         }
-    }
-
-    private void UpdateTimerText()
-    {
-        if (timerActive)
-        {
-            float timeSinceStart = Time.time - startTime;
-            int minutes = Mathf.FloorToInt(timeSinceStart / 60);
-            int seconds = Mathf.FloorToInt(timeSinceStart % 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }
-    }
-
-    public void StopTimer()
-    {
-        timerActive = false;
     }
 
 

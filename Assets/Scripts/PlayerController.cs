@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void putDownCat()
     {
         grabbedCat.GetComponent<Animator>().SetBool("Walk", true);

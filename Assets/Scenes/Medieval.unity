@@ -4306,6 +4306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890390700897493055, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+      propertyPath: FPVcamera
+      value: 
+      objectReference: {fileID: 6859674760271218245}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21544,6 +21548,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb2cfbb10165b8f47b80c21fa83c77f6, type: 3}
+--- !u!114 &6859674760271218245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514185728725964840, guid: fb2cfbb10165b8f47b80c21fa83c77f6, type: 3}
+  m_PrefabInstance: {fileID: 6859674760271218244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1e6ac900efbb04393f21d9601071b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

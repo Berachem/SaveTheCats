@@ -26,9 +26,10 @@ public class CustomFirstPersonController : MonoBehaviour
     private bool isCrouched = false;
     private bool FPVLocked = false; // Ajout pour gérer l'état de verrouillage du curseur
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -86,6 +87,14 @@ public class CustomFirstPersonController : MonoBehaviour
     public void SwitchCursorLock()
     {
         FPVLocked = !FPVLocked;
+        if (!FPVLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void unlockCursor()

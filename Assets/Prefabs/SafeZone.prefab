@@ -616,7 +616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indication: {fileID: 0}
-  timerText: {fileID: 0}
+  userInterface: {fileID: 0}
+  victorySound: {fileID: 8300000, guid: c787931f01f9c4076a7b923656464e9b, type: 3}
 --- !u!1 &4093685216409975112
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CatController : MonoBehaviour
 {
     public bool isInSafeZone = false;
-    public AudioClip meowSound; // Le son de miaulement
+    public AudioClip[] meowSounds; // Tableau des sons de miaulement
     public AudioClip purrSound; // Le son de ronronnement
     private AudioSource audioSource;
 
@@ -14,8 +14,6 @@ public class CatController : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetTrigger("Walk");
         audioSource = gameObject.AddComponent<AudioSource>();
-
-        // Commence à vérifier le comportement de miaulement et de ronronnement
         StartCoroutine(HandleCatSounds());
     }
 
@@ -24,7 +22,7 @@ public class CatController : MonoBehaviour
     {
         while (true) // Continue indéfiniment
         {
-            yield return new WaitForSeconds(Random.Range(10, 20)); // Attend un intervalle aléatoire entre 30 et 60 secondes
+            yield return new WaitForSeconds(Random.Range(25, 50)); // Attend un intervalle aléatoire
 
             if (isInSafeZone)
             {
@@ -33,7 +31,7 @@ public class CatController : MonoBehaviour
             }
             else
             {
-                // Sinon, le chat miaule
+                // Sinon, le chat miaule avec un des sons de miaulement aléatoires
                 Meow();
             }
         }
@@ -41,10 +39,12 @@ public class CatController : MonoBehaviour
 
     public void Meow()
     {
-        if (audioSource != null && meowSound != null)
+        if (audioSource != null && meowSounds.Length > 0)
         {
-            audioSource.clip = meowSound;
-            audioSource.Play(); // Joue le son de miaulement
+            // Sélectionne un son de miaulement aléatoire
+            AudioClip randomMeow = meowSounds[Random.Range(0, meowSounds.Length)];
+            audioSource.clip = randomMeow;
+            audioSource.Play(); // Joue le son de miaulement sélectionné
         }
     }
 

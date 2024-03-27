@@ -1208,7 +1208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInSafeZone: 0
-  meowSound: {fileID: 8300000, guid: cd90965f3c2e94094841809f6ded4fce, type: 3}
+  meowSounds:
+  - {fileID: 8300000, guid: cd90965f3c2e94094841809f6ded4fce, type: 3}
+  - {fileID: 8300000, guid: 68190bb781e204875b31a0cc0aeff7e0, type: 3}
+  - {fileID: 8300000, guid: c840d0b1a823c4159aa38035ed74f17a, type: 3}
+  - {fileID: 8300000, guid: be6fbd8cbb1664dcd931d434015c49ab, type: 3}
   purrSound: {fileID: 8300000, guid: 3de0c1e10b02344909cd372e2cd53419, type: 3}
 --- !u!195 &4466894035922206787
 NavMeshAgent:

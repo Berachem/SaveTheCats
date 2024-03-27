@@ -24,7 +24,7 @@ public class CustomFirstPersonController : MonoBehaviour
     private float rotX;
     private bool isSprinting = false;
     private bool isCrouched = false;
-    private bool FPVLocked = false; // Ajout pour gérer l'état de verrouillage du curseur
+    private bool FPVLocked = false; // Ajout pour gï¿½rer l'ï¿½tat de verrouillage du curseur
 
     private void Start()
     {
@@ -44,7 +44,7 @@ public class CustomFirstPersonController : MonoBehaviour
         if (Input.GetKeyDown(crouchKey))
             ToggleCrouch();
 
-        // Basculer l'état du verrouillage du curseur avec la touche "Escape"
+        // Basculer l'ï¿½tat du verrouillage du curseur avec la touche "Escape"
         if (Input.GetKeyDown(KeyCode.Escape))
             SwitchCursorLock();
     }
@@ -86,25 +86,21 @@ public class CustomFirstPersonController : MonoBehaviour
 
     public void SwitchCursorLock()
     {
-        FPVLocked = !FPVLocked;
-        if (!FPVLocked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+        if (FPVLocked) unlockCursor();
+        else lockCursor();
     }
 
     public void unlockCursor()
     {
        FPVLocked = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     public void lockCursor()
     {
         FPVLocked = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 

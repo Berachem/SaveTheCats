@@ -7842,6 +7842,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 30325405}
     - target: {fileID: 678978951119247425, guid: d7e7743e79d55d04483d98c450bea775, type: 3}
+      propertyPath: victorySound
+      value: 
+      objectReference: {fileID: 8300000, guid: c787931f01f9c4076a7b923656464e9b, type: 3}
+    - target: {fileID: 678978951119247425, guid: d7e7743e79d55d04483d98c450bea775, type: 3}
       propertyPath: userInterface
       value: 
       objectReference: {fileID: 178313110}

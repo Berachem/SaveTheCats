@@ -8,11 +8,20 @@ public class SafeZoneController : MonoBehaviour
     private int catsRemaining;
     public InterfaceController userInterface;
 
+    public AudioClip victorySound; // AudioClip pour le son de victoire
+    private AudioSource audioSource; 
+
 
     private void Start()
     {
         // Initialiser catsRemaining avec le nombre de chats dans la scène
         catsRemaining = GameObject.FindGameObjectsWithTag("Grabable").Length;
+        audioSource = GetComponent<AudioSource>(); 
+        if (audioSource == null)
+        {
+            // Si aucun AudioSource n'est trouvé, en ajoute un dynamiquement
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         UpdateIndicationText();
     }
 
@@ -69,6 +78,18 @@ public class SafeZoneController : MonoBehaviour
             // Texte "Victoire !" en vert
             indication.text = "<color=#00FF00>Victoire !</color>";
             userInterface.StopTimer(); // Arrête le timer quand il n'y a plus de chats à sauver
+            PlayVictorySound();
+        }
+    }
+
+    private void PlayVictorySound()
+    {
+        if (victorySound != null && audioSource != null)
+        {
+            audioSource.clip = victorySound;
+            audioSource.volume = 1f;
+            audioSource.Play(); // Joue le son de victoire
+            Debug.Log("Lecture du son Victoire !");
         }
     }
 

@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //si on voit un chat et qu'on à pas de chat dans les bras
+        //si on voit un chat et qu'on ï¿½ pas de chat dans les bras
         if(grabbedCat == null)
 
             if (seeCat)
@@ -35,9 +35,10 @@ public class PlayerController : MonoBehaviour
                     indication.gameObject.SetActive(true);
                     if (Input.GetKeyDown("e"))
                     {
-                        // Vérifie si le chat peut être saisi
+                        // Vï¿½rifie si le chat peut ï¿½tre saisi
 
                         grabbedCat = seenCat;
+                        catController.Meow();
                         grabbedCat.GetComponent<Rigidbody>().freezeRotation = true;
                         grabbedCat.GetComponent<Animator>().SetBool("Walk",false);
                         grabbedCat.GetComponent<Animator>().SetBool("Sit", true);

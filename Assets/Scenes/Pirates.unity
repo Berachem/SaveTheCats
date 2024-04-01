@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 905082700}
-  m_IndirectSpecularColor: {r: 0.35485497, g: 0.46246073, b: 0.5018128, a: 1}
+  m_IndirectSpecularColor: {r: 0.35514566, g: 0.46256196, b: 0.50195444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16613,18 +16613,6 @@ PrefabInstance:
     - target: {fileID: 946352269441288926, guid: 4366f6e33aba3fd4eb6cfa2937882379, type: 3}
       propertyPath: m_Name
       value: LargeFlames
-      objectReference: {fileID: 0}
-    - target: {fileID: 3009855636757364777, guid: 4366f6e33aba3fd4eb6cfa2937882379, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7541994
-      objectReference: {fileID: 0}
-    - target: {fileID: 3009855636757364777, guid: 4366f6e33aba3fd4eb6cfa2937882379, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7541996
-      objectReference: {fileID: 0}
-    - target: {fileID: 3009855636757364777, guid: 4366f6e33aba3fd4eb6cfa2937882379, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.2922816
       objectReference: {fileID: 0}
     - target: {fileID: 3009855636757364777, guid: 4366f6e33aba3fd4eb6cfa2937882379, type: 3}
       propertyPath: m_LocalPosition.x

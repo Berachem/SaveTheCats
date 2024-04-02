@@ -1,13 +1,9 @@
 # 🐈 Save The Cats
 
-<aside>
+
 📖 Infographie 3D - IN11 - @ESIEE Paris - E3Fi 2023/2024- Groupe 2I
 
-</aside>
-
-<aside>
-👨‍💻 Berachem MARKRIA & Joshua LEMOINE
-</aside>
+👨‍💻 [Berachem MARKRIA](https://berachem.dev/) & Joshua LEMOINE
 
 <br/>
 

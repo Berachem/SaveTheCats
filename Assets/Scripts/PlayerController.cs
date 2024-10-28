@@ -22,16 +22,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //si on voit un chat et qu'on � pas de chat dans les bras
-        if(grabbedCat == null)
+        
+        if(grabbedCat == null)//si on voit un chat et qu'on � pas de chat dans les bras
 
             if (seeCat)
             {
                 //on peut chopper le chat qu'on voit & s'il n'est pas dans la SafeZone
                 CatController catController = seenCat.GetComponent<CatController>();
+                Talker catTalker = seenCat.GetComponent<Talker>();
+
                 if (!catController.isInSafeZone)
                 {
-                    indication.text = "Appuyez sur E pour saisir le chat";
+                    indication.text = "Appuyez sur E pour saisir le chat ou C pour discuter";
                     indication.gameObject.SetActive(true);
                     if (Input.GetKeyDown("e"))
                     {
@@ -44,6 +46,9 @@ public class PlayerController : MonoBehaviour
                         grabbedCat.GetComponent<Animator>().SetBool("Sit", true);
                         indication.gameObject.SetActive(false);
 
+                    }else if (Input.GetKeyDown("c") && !catTalker.isInDialogue())
+                    {
+                        catTalker.TriggerDialogue();
                     }
                 }else //si le chat est dans la SafeZone
                 {

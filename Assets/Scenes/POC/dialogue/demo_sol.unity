@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &614922139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4843090880857639870, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+  m_PrefabInstance: {fileID: 1076071327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +228,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &913214346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2694437598057856224, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+  m_PrefabInstance: {fileID: 1076071327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &924746490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,6 +300,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb2cfbb10165b8f47b80c21fa83c77f6, type: 3}
+--- !u!1 &968490364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447846063101744623, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+  m_PrefabInstance: {fileID: 1076071327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &968490366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968490364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069ed5afe6fdeca468106ad9971b916c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: {fileID: 614922139}
+  dialogue: {fileID: 913214346}
+  animator: {fileID: 0}
+  FPVcamera: {fileID: 1740831205}
 --- !u!1001 &1076071327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -374,10 +417,21 @@ PrefabInstance:
       propertyPath: FPVcamera
       value: 
       objectReference: {fileID: 1740831205}
+    - target: {fileID: 6447846063101744623, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156692653458920241, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+      propertyPath: FPVcamera
+      value: 
+      objectReference: {fileID: 1740831205}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6447846063101744623, guid: 19f92e867665a0946b921525c0b82676, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 968490366}
   m_SourcePrefab: {fileID: 100100000, guid: 19f92e867665a0946b921525c0b82676, type: 3}
 --- !u!114 &1281153080 stripped
 MonoBehaviour:
@@ -445,7 +499,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5927668254007688883, guid: e5c16de28bca2714c974258650875027, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1764811492}
   m_SourcePrefab: {fileID: 100100000, guid: e5c16de28bca2714c974258650875027, type: 3}
 --- !u!1 &1727710032
 GameObject:
@@ -596,6 +653,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1e6ac900efbb04393f21d9601071b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1764811491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5927668254007688883, guid: e5c16de28bca2714c974258650875027, type: 3}
+  m_PrefabInstance: {fileID: 1694364144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1764811492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764811491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60222a77efd54bd4a9d11a690a9f7b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Gaston
+    sentences:
+    - Bonjour Humain
+    - Je suis un Potit Chat
+    - Au revoir !
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

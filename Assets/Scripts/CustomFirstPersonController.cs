@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class CustomFirstPersonController : MonoBehaviour
@@ -25,6 +26,7 @@ public class CustomFirstPersonController : MonoBehaviour
     private bool isSprinting = false;
     private bool isCrouched = false;
     private bool FPVLocked = false; // Ajout pour g�rer l'�tat de verrouillage du curseur
+    private bool camLocked = false; //pour immobiliser la camera en plus du joueur
 
     private void Start()
     {
@@ -38,7 +40,10 @@ public class CustomFirstPersonController : MonoBehaviour
         {
             Move();
         }
-        CamLook();
+        if (!camLocked)
+        {
+            CamLook();
+        }
         if (Input.GetKeyDown(jumpKey))
             Jump();
         if (Input.GetKeyDown(crouchKey))
@@ -101,6 +106,18 @@ public class CustomFirstPersonController : MonoBehaviour
     {
         FPVLocked = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void lockMovement()
+    {
+        FPVLocked = true;
+        camLocked = true;
+    }
+
+    public void unlockMovement()
+    {
+        FPVLocked = false;
+        camLocked = false;
     }
 
 

@@ -9,6 +9,13 @@ public class CatController : MonoBehaviour
     public AudioClip purrSound; // Le son de ronronnement
     private AudioSource audioSource;
 
+    public string catName = "Minou";
+    public int age = 3;
+
+    // histoire triste du chat
+    public string story = "Minou est un chat errant qui a été abandonné par sa famille. Il a subi de la maltraitance, a été blessé et était affamé. Minou n'a pas eu la chance de survivre à la rue et est mort de faim.";
+    public string storyDate = "15/03/2021";
+
     // Start is called before the first frame update
     void Start()
     {

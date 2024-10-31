@@ -1,17 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!1045 &1
-EditorBuildSettings:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 1cf5c647fc65e9c4bb5e6fd3b3d63573
-  - enabled: 1
-    path: Assets/Scenes/Medieval.unity
-    guid: d2809ab9b90eea7419d8d90d4c505d35
-  - enabled: 1
-    path: Assets/Scenes/Pirates.unity
-    guid: e21e59967b1933d43a5e84a46ab9afe8
-  m_configObjects: {}
+version https://git-lfs.github.com/spec/v1
+oid sha256:265f6bf46c60d0c16f74506aea07ae6b922db86d210dd6fd23f92aa62c147717
+size 465

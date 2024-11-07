@@ -14,6 +14,11 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("Medieval");
     }
 
+    public void StartRealisticGame()
+    {
+        SceneManager.LoadScene("Realistic");
+    }
+
     public void LeaveGame()
     {
         Application.Quit();

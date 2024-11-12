@@ -15,7 +15,7 @@ public class SafeZoneController : MonoBehaviour
     private void Start()
     {
         // Initialiser catsRemaining avec le nombre de chats dans la scène
-        catsRemaining = GameObject.FindGameObjectsWithTag("Grabable").Length;
+        catsRemaining = GameObject.FindGameObjectsWithTag("DeadCat").Length;
         audioSource = GetComponent<AudioSource>(); 
         if (audioSource == null)
         {
@@ -45,6 +45,12 @@ public class SafeZoneController : MonoBehaviour
             // Décrémente catsRemaining et met à jour le texte
             catsRemaining--;
             UpdateIndicationText();
+        }else if (other.CompareTag("DeadCat"))
+        {
+            DeadCatController controller = other.GetComponent<DeadCatController>();
+            controller.enterSafeZone();
+            catsRemaining--;
+            UpdateIndicationText();
         }
     }
 
@@ -61,6 +67,13 @@ public class SafeZoneController : MonoBehaviour
             catController.GetComponent<Animator>().SetBool("Sit", false);
 
             // Incrémente catsRemaining et met à jour le texte
+            catsRemaining++;
+            UpdateIndicationText();
+        }
+        else if (other.CompareTag("DeadCat"))
+        {
+            DeadCatController controller = other.GetComponent<DeadCatController>();
+            controller.exitSafeZone();
             catsRemaining++;
             UpdateIndicationText();
         }

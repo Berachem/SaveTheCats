@@ -1099,13 +1099,12 @@ GameObject:
   - component: {fileID: 8030366796390165046}
   - component: {fileID: 8316330792273724365}
   - component: {fileID: 6326436746731022502}
-  - component: {fileID: 8782473797936064953}
   - component: {fileID: 4466894035922206787}
-  - component: {fileID: 786734689736611231}
   - component: {fileID: 6474300952297016405}
+  - component: {fileID: 3627726731057026725}
   m_Layer: 0
   m_Name: catSpirit
-  m_TagString: Grabable
+  m_TagString: CatSpirit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,31 +1195,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8782473797936064953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927668254007688883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e177f58f3f7c3584fabdcab77a532886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInSafeZone: 0
-  meowSounds:
-  - {fileID: 8300000, guid: cd90965f3c2e94094841809f6ded4fce, type: 3}
-  - {fileID: 8300000, guid: 68190bb781e204875b31a0cc0aeff7e0, type: 3}
-  - {fileID: 8300000, guid: c840d0b1a823c4159aa38035ed74f17a, type: 3}
-  - {fileID: 8300000, guid: be6fbd8cbb1664dcd931d434015c49ab, type: 3}
-  purrSound: {fileID: 8300000, guid: 3de0c1e10b02344909cd372e2cd53419, type: 3}
-  catName: Minou
-  age: 3
-  story: "Minou est un chat errant qui a \xE9t\xE9 abandonn\xE9 par sa famille. Il
-    a subi de la maltraitance, a \xE9t\xE9 bless\xE9 et \xE9tait affam\xE9. Minou
-    n'a pas eu la chance de survivre \xE0 la rue et est mort de faim."
-  storyDate: 15/03/2021
 --- !u!195 &4466894035922206787
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1243,20 +1217,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &786734689736611231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927668254007688883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e501b0e9b83764988bfa58df6287dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wanderRadius: 10
-  wanderTimer: 3
 --- !u!114 &6474300952297016405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,8 +1230,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
+    name: Bob
+    sentences:
+    - Bonjour
+    - Je suis un esprit
+    - Au revoir
+--- !u!114 &3627726731057026725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927668254007688883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb723ec649158284f98261d35cc9f70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderRadius: 2
+  wanderTimer: 2
+  deadCat: {fileID: 0}
 --- !u!1 &6069123230647576753
 GameObject:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ public class SafeZoneController : MonoBehaviour
             // Texte "Victoire !" en vert
             indication.text = "<color=#00FF00>Victoire !</color>";
             userInterface.StopTimer(); // Arrête le timer quand il n'y a plus de chats à sauver
-            PlayVictorySound();
+            //PlayVictorySound();
         }
     }
 

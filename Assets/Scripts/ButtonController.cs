@@ -16,7 +16,7 @@ public class ButtonController : MonoBehaviour
 
     public void StartRealisticGame()
     {
-        SceneManager.LoadScene("Realistic");
+        SceneManager.LoadScene("Prologue");
     }
 
     public void LeaveGame()

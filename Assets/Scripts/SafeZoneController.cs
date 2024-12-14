@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class SafeZoneController : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class SafeZoneController : MonoBehaviour
     public InterfaceController userInterface;
 
     public AudioClip victorySound; // AudioClip pour le son de victoire
-    private AudioSource audioSource; 
+    private AudioSource audioSource;
+
+
 
 
     private void Start()
@@ -90,10 +93,18 @@ public class SafeZoneController : MonoBehaviour
         {
             // Texte "Victoire !" en vert
             indication.text = "<color=#00FF00>Victoire !</color>";
-            userInterface.StopTimer(); // Arrête le timer quand il n'y a plus de chats à sauver
+            userInterface.StopTimer(); // Arrête le timer
             //PlayVictorySound();
+
+            Debug.Log("Victoire !");
+
+            // On change de scène vers l'épilogue
+            SceneManager.LoadScene("Epilogue");
+
+
         }
     }
+
 
     private void PlayVictorySound()
     {

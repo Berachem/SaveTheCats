@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Epilogue.unity
     guid: d01540e3ae8d5644eac4807cf2371401
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7eec5cf1c933ce4439a7f69a6a342788, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b69bdedfb54af7840823b37eadd6c047, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 2bc04a3a8a7013c4199bb3d2ab14d927, type: 2}

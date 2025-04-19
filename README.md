@@ -8,7 +8,7 @@
 <br/>
 
 
-🇬🇧 keywords : cats - rescue - cute - fire - relaxation - level
+🇬🇧 keywords : cats - rescue - cute - fire - relaxation - level - XR
 
 
 # 🔴 Vidéo de démo

@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI name;
     public TextMeshProUGUI dialogue;
     public Animator animator;
-    public CustomFirstPersonController FPVcamera;
 
+    public InputActionReference nextDialogueAction; 
+    public InputActionReference endDialogueAction;   
 
     private Queue<string> sentences;
     private bool inDialogue = false;
@@ -19,15 +22,28 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    private void OnEnable()
+    {
+        nextDialogueAction.action.Enable();
+        endDialogueAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        nextDialogueAction.action.Disable();
+        endDialogueAction.action.Disable();
+    }
+
     private void Update()
     {
         if (inDialogue)
         {
-            if (Input.GetKeyDown("c"))
+            if (nextDialogueAction.action.WasPressedThisFrame())
             {
                 DisplayNextSentence();
             }
-            else if (Input.GetKeyDown("x"))
+          
+            else if (endDialogueAction.action.WasPressedThisFrame())
             {
                 EndDialogue();
             }
@@ -38,10 +54,9 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", true);
         inDialogue = true;
-        FPVcamera.lockMovement();
 
         sentences.Clear();
-        foreach(string sentence in dialogue.sentences)
+        foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -49,26 +64,23 @@ public class DialogueManager : MonoBehaviour
         name.text = dialogue.name + " : ";
 
         DisplayNextSentence();
-
     }
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
         dialogue.text = sentence;
-
     }
 
     public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
         inDialogue = false;
-        FPVcamera.unlockMovement();
     }
 
     public bool isInDialogue()

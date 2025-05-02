@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class InterfaceController : MonoBehaviour
 {
-    public CustomFirstPersonController FPVcamera;
     public GameObject menu;
     public GameObject userInterface;
     public TextMeshProUGUI timerText; // Texte pour le timer
@@ -14,18 +16,21 @@ public class InterfaceController : MonoBehaviour
     private bool timerActive = true; // Détermine si le timer est actif
     private bool gameRunning = true;
 
+    public InputActionReference pauseAction;
+
     // Start is called before the first frame update
     void Start()
     {
         startTime = Time.time; // Initialise le startTime avec le temps actuel
         //nextLevel.SetActive(false); // Désactive le texte pour le niveau suivant
-        FPVcamera.unlockCursor(); // Dévérouille le curseur
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)){
+        if (pauseAction.action.WasPressedThisFrame())
+        {
             SwitchPause();
         }
 
@@ -62,14 +67,14 @@ public class InterfaceController : MonoBehaviour
             timerActive = false;
             gameRunning = false;
            // nextLevel.SetActive(true);
-            FPVcamera.lockCursor();
+            
         }
     }
 
     public void SwitchPause()
     {
         SwitchMenu();
-        FPVcamera.SwitchCursorLock();
+       
         if (gameRunning)
         {
             timerActive = !timerActive;

@@ -96,7 +96,7 @@ public class XRPlayerController : MonoBehaviour
         }
         else
         {
-            bool isHolding = (rightGrabAction.action.IsPressed() || leftGrabAction.action.IsPressed());
+            bool isHolding = (rightGrabAction.action.IsPressed()); //  || leftGrabAction.action.IsPressed()
 
             if (!isHolding)
             {

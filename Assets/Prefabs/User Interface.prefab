@@ -132,11 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b95904eb97bde498b0d7853794a035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPVcamera: {fileID: 0}
   menu: {fileID: 9208562280803395664}
   userInterface: {fileID: 790672989647857957}
   timerText: {fileID: 901629621693073267}
-  nextLevel: {fileID: 8441156023201106443}
+  pauseAction: {fileID: 0}
 --- !u!1 &274923686129893863
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,8 +203,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Chat :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -845,8 +844,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MM:SS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -979,8 +978,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"X" pour quitter'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1385,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e7d158635461f69479083043a2812a86, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1598,6 +1597,8 @@ MonoBehaviour:
   name: {fileID: 4843090880857639870}
   dialogue: {fileID: 2694437598057856224}
   animator: {fileID: 8895526357144312743}
+  nextDialogueAction: {fileID: 0}
+  endDialogueAction: {fileID: 0}
 --- !u!1 &8229128466524410464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,8 +1667,8 @@ MonoBehaviour:
   m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1936,8 +1937,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2470,8 +2471,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"C" pour continuer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
-  m_sharedMaterial: {fileID: -4263918533972065196, guid: 6c9ead30d42237740b08ffc5dcacc45b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -36,7 +36,7 @@ public class XRPlayerController : MonoBehaviour
                 CatController catController = targetObject.GetComponent<CatController>();
                 if (!catController.isInSafeZone)
                 {
-                    indication.text = "Pressez les gachettes pour saisir le chat";
+                    indication.text = "Pressez la gachette droite pour saisir le chat";
                     indication.gameObject.SetActive(true);
 
                     if (rightGrabAction.action.WasPressedThisFrame())
@@ -58,10 +58,10 @@ public class XRPlayerController : MonoBehaviour
             else if (targetIsSpirit)
             {
                 Talker talker = targetObject.GetComponent<Talker>();
-                indication.text = "Pressez Bouton A pour discuter avec l'esprit";
+                indication.text = "Pressez la gachette gauche pour discuter avec l'esprit";
                 indication.gameObject.SetActive(true);
 
-                if (talkAction.action.WasPressedThisFrame() && !talker.isInDialogue())
+                if (leftGrabAction.action.WasPressedThisFrame() && !talker.isInDialogue())
                 {
                     talker.TriggerDialogue();
                 }
@@ -71,7 +71,7 @@ public class XRPlayerController : MonoBehaviour
                 DeadCatController deadCatController = targetObject.GetComponent<DeadCatController>();
                 if (!deadCatController.isInSafeZone)
                 {
-                    indication.text = "Pressez les gachettes pour porter le corps du chat";
+                    indication.text = "Pressez la gachette droite pour porter le corps du chat";
                     indication.gameObject.SetActive(true);
 
                     if (rightGrabAction.action.WasPressedThisFrame())

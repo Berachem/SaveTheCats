@@ -93,7 +93,6 @@ public class SafeZoneController : MonoBehaviour
         {
             // Texte "Victoire !" en vert
             indication.text = "<color=#00FF00>Victoire !</color>";
-            userInterface.StopTimer(); // Arrête le timer
             //PlayVictorySound();
 
             Debug.Log("Victoire !");

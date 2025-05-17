@@ -36,7 +36,7 @@ public class XRPlayerController : MonoBehaviour
                 CatController catController = targetObject.GetComponent<CatController>();
                 if (!catController.isInSafeZone)
                 {
-                    indication.text = "Pressez la gachette droite pour saisir le chat";
+                    indication.text = "Porter le corps du chat (gachette droite)";
                     indication.gameObject.SetActive(true);
 
                     if (rightGrabAction.action.WasPressedThisFrame())
@@ -51,14 +51,14 @@ public class XRPlayerController : MonoBehaviour
                 }
                 else
                 {
-                    indication.text = "Le chat est dans la SafeZone. Bravo !";
+                    indication.text = "Le chat repose en paix.";
                     indication.gameObject.SetActive(true);
                 }
             }
             else if (targetIsSpirit)
             {
                 Talker talker = targetObject.GetComponent<Talker>();
-                indication.text = "Pressez la gachette gauche pour discuter avec l'esprit";
+                indication.text = "Discuter avec l'esprit (gachette gauche)";
                 indication.gameObject.SetActive(true);
 
                 if (leftGrabAction.action.WasPressedThisFrame() && !talker.isInDialogue())
@@ -71,7 +71,7 @@ public class XRPlayerController : MonoBehaviour
                 DeadCatController deadCatController = targetObject.GetComponent<DeadCatController>();
                 if (!deadCatController.isInSafeZone)
                 {
-                    indication.text = "Pressez la gachette droite pour porter le corps du chat";
+                    indication.text = "Porter le corps du chat (gachette droite)";
                     indication.gameObject.SetActive(true);
 
                     if (rightGrabAction.action.WasPressedThisFrame())
@@ -85,7 +85,7 @@ public class XRPlayerController : MonoBehaviour
                 }
                 else
                 {
-                    indication.text = "Le chat est dans la SafeZone.";
+                    indication.text = "Le chat repose en paix.";
                     indication.gameObject.SetActive(true);
                 }
             }

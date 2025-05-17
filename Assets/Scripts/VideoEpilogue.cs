@@ -31,6 +31,6 @@ public class VideoEpilogue : MonoBehaviour
 
         // Changer de scène
         //SceneManager.LoadScene("StartMenu");
-        Application.Quit();//leave le jeu
+        UnityEngine.Application.Quit();//leave le jeu
     }
 }

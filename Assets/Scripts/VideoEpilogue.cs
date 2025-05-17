@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using static System.Net.Mime.MediaTypeNames;
 
 public class VideoEpilogue : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class VideoEpilogue : MonoBehaviour
         Debug.Log("Fin de la vidéo de l'épilogue");
 
         // Changer de scène
-        SceneManager.LoadScene("StartMenu");
+        //SceneManager.LoadScene("StartMenu");
+        Application.Quit();//leave le jeu
     }
 }

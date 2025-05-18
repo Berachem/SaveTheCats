@@ -15,11 +15,17 @@ public class InterfaceController : MonoBehaviour
 
     public InputActionReference pauseAction;
 
+    void Start()
+    {
+        pauseAction.action.Enable();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (pauseAction.action.WasPressedThisFrame())
+        if (pauseAction.action != null && pauseAction.action.WasPressedThisFrame())
         {
+            Debug.Log("Pause action déclenchée !");
             SwitchPause();
         }
     }

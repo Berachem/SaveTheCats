@@ -1,21 +1,47 @@
 # 🐈 Save The Cats
 
-
 📖 Infographie 3D - IN11 - @ESIEE Paris - E3Fi 2023/2024- Groupe 2I
+
+📖 Extended Reality - @ESIEE Paris - E4Fi 2024/2025- Groupe 2I
 
 👨‍💻 [Berachem MARKRIA](https://berachem.dev/) & Joshua LEMOINE
 
 <br/>
 
+# 🔴 Save The Cats - Version 3 (VR)
 
-🇬🇧 keywords : cats - rescue - cute - fire - relaxation - level - XR
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/og5VDWb8v5E/0.jpg)](http://www.youtube.com/watch?v=og5VDWb8v5E "SaveTheCats VR")
+
+> watch it on [Youtube](http://www.youtube.com/watch?v=og5VDWb8v5E)
+
+Un jeu en VR contemplatif, où l’on guide avec délicatesse les souvenirs de chats vers la paix. Chaque interaction est un hommage.
 
 
-# 🔴 Vidéo de démo
+# 🔴 Save The Cats - Version 2
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/E9qIvl14iEU/0.jpg)](http://www.youtube.com/watch?v=E9qIvl14iEU "SaveTheCats")
+
+> watch it on [Youtube](http://www.youtube.com/watch?v=E9qIvl14iEU)
+
+Inviter le joueur à découvrir, avec curiosité et empathie, les récits de vies brisées, et à réfléchir sur la trace de l'humanité laissée à travers ces âmes silencieuses.
+
+
+# 🔴 Save The Cats - Version 1
 
 <a href="https://drive.google.com/file/d/1MZyoMnJWDiopNRowKk1aQ6pwh9iD9RqX/view?usp=sharing"><img  src="https://igadvisory.fr/opendata/SaveTheCats/assets/Untitled 1.png"/></a>
 
 > watch it on [Youtube](https://drive.google.com/file/d/1MZyoMnJWDiopNRowKk1aQ6pwh9iD9RqX/view?usp=sharing)
+
+Vous incarnez un héros dédié au sauvetage de chats égarés dans des villages en proie aux flammes. Votre mission est de localiser ces félins et de les transporter en toute sécurité vers la SafeZone, le tout en visant le temps le plus court possible.
+
+<details>
+
+<summary>
+<b> More Details  </b>
+</summary>
+
+
+🇬🇧 keywords : cats - rescue - cute - fire - relaxation - level - XR
 
 
 ## 🐈 Principe du jeu
@@ -210,3 +236,5 @@ Et ensuite, les éléments ci-dessous :
 [Junior Programmer Pathway - Unity Learn](https://learn.unity.com/learn/pathway/junior-programmer)
 
 [Unity Essentials Pathway - Unity Learn](https://learn.unity.com/pathway/unity-essentials)
+
+</details>
